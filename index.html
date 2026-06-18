@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -298,8 +299,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
 }
 .plan.vip .plan-name{
   font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;
-  background:linear-gradient(135deg,var(--gold-deep),var(--gold-warm),var(--gold-deep));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  color:#7A5A1A;-webkit-text-fill-color:#7A5A1A}
 .plan.vip .plan-price{
   background:linear-gradient(135deg,var(--gold-deep),var(--gold));
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
@@ -331,14 +331,18 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
 .plan-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:#3d1a28;color:var(--cream);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;padding:5px 18px;border-radius:100px;white-space:nowrap;z-index:2}
 .plan.pop .plan-badge{position:relative;top:auto;left:auto;transform:none;display:inline-block;margin-bottom:14px;background:linear-gradient(135deg,#C62828,#E53935);color:#fff;font-size:12px;padding:7px 22px;letter-spacing:1.8px;box-shadow:0 3px 12px rgba(198,40,40,.3);animation:badgePulse 2s ease-in-out infinite}
 @keyframes badgePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
-.plan-badge.gold{background:linear-gradient(135deg,#9A7828,#C9A44E,#B8913A);color:var(--white);box-shadow:0 2px 10px rgba(184,145,58,.3);letter-spacing:1.5px}
+.plan-badge.gold{background:linear-gradient(135deg,#9A7828,#C9A44E,#B8913A);color:var(--white);box-shadow:0 2px 10px rgba(184,145,58,.3);letter-spacing:1.5px;font-size:13px;padding:8px 26px}
 .plan-name{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--ink);margin-bottom:4px}
 .plan-level{font-size:15px;color:var(--muted);margin-bottom:18px;line-height:1.5}
 .plan-price{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:700;line-height:1;margin-bottom:4px}
 .plan-price .cur{font-size:20px;font-weight:500}
+.plan.std .plan-price,.plan.vip .plan-price{margin-top:auto}
+.plan.std > .plan-name,.plan.std > .plan-level,.plan.std > .plan-price{display:block}
+.plan-header-wrap{min-height:120px;display:flex;flex-direction:column;justify-content:flex-end}
 .plan-sub{font-size:13px;color:var(--muted);margin-bottom:20px}
 .plan-div{height:1px;background:var(--border2);margin-bottom:18px}
-.plan-list{display:grid;gap:10px;flex:1}
+.plan.std .plan-list{gap:2px}
+.plan-list{display:grid;gap:4px;flex:1}
 .plan-list li{font-size:14.5px;line-height:1.55;color:var(--ink2);display:flex;align-items:flex-start;gap:9px}
 .plan-list li svg{flex-shrink:0;margin-top:2px}
 .plan-list li.hl{font-weight:600;color:var(--brown)}
@@ -637,11 +641,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
     <div class="feat rv"><div class="feat-e">🇯🇵</div><div class="feat-n">Помощь с поступлением</div><div class="feat-d">Консультации по поступлению в языковые школы — краткосрочное и долгосрочное обучение</div></div>
     <div class="feat rv rv-d1"><div class="feat-e">🎬</div><div class="feat-n">Записи уроков навсегда</div><div class="feat-d">Все онлайн-уроки записываются и доступны бессрочно. Пропустили — ничего страшного!</div></div>
   </div>
-  <div class="stats">
-    <div class="stat rv"><div class="stat-n">2×</div><div class="stat-l">Занятия в неделю</div></div>
-    <div class="stat rv rv-d1"><div class="stat-n">80</div><div class="stat-l">Минут за урок</div></div>
-    <div class="stat rv rv-d2"><div class="stat-n">47</div><div class="stat-l">Уроков в полном курсе</div></div>
-  </div>
+
 </div>
 </section>
 
@@ -704,27 +704,29 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
 <div class="plans-sakura" id="plans-sakura"></div>
 <div class="sec-in">
   <div class="tag">Тарифы N5 и N4</div>
-  <h2 class="sec-h">Планы обучения — набор N5 и N4</h2>
-  <p class="sec-p">Сейчас открыт набор на курсы N5 и N4. Выберите план, который подходит вам. Все планы — онлайн, в мини-группах. Старт апрель / май 2026.</p>
+  <h2 class="sec-h">Набор 2026 — все курсы открыты</h2>
+  <p class="sec-p">Выберите план, который подходит вам. Все планы — онлайн, в мини-группах.</p>
   <div class="plans-grid">
 
     <!-- Standard -->
     <div class="plan std rv">
+      <div style="min-height:110px">
       <div class="plan-name">Standard</div>
-      <div class="plan-level">N5 или N4 · первая половина уровня · 4 месяца</div>
-      <div class="plan-price"><span class="cur">₽</span> 59 900</div>
+      <div class="plan-level">N5 или N4 · полный курс · 4 месяца</div>
+      </div>
+      <div class="plan-price"><span class="cur">₽</span> 73 000</div>
       <div class="plan-div"></div>
-      <ul class="plan-list">
-        <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#5C3A3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>27 онлайн-занятий (первая половина N5 или N4)</li>
-        <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#5C3A3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Мини-группа 6–8 человек</li>
+      <ul class="plan-list" style="gap:2px">
+        <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#5C3A3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>33 онлайн-занятия (полный курс N5 или N4)</li>
+        <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#5C3A3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Мини-группа 5–7 человек</li>
         <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#5C3A3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>2 занятия в неделю по 1 ч. 20 мин.</li>
         <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#5C3A3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Домашние задания с проверкой и обратной связью</li>
         <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#5C3A3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Интерактивная обучающая платформа</li>
         <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#5C3A3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Чат группы с преподавателем</li>
         <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#5C3A3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Записи всех занятий бессрочно</li>
-        <li class="x"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#B09E9E" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Индивидуальные уроки</li>
-        <li class="x"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#B09E9E" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Уроки по аниме</li>
-        <li class="x"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#B09E9E" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Консультация по поступлению</li>
+        <li class="x">🔒 Индивидуальные уроки</li>
+        <li class="x">🔒 Уроки по аниме</li>
+        <li class="x">🔒 Консультация по поступлению</li>
       </ul>
       <button class="plan-btn dark" onclick="window.open('https://docs.google.com/forms/d/1gLPC5TOqLdee24IAhCQBhTdcNgIST9NFoBA7DnhcGrk/viewform','_blank')">🌸 Записаться в N5</button>
       <button class="plan-btn dark" style="margin-top:8px" onclick="window.open('https://docs.google.com/forms/d/1gLPC5TOqLdee24IAhCQBhTdcNgIST9NFoBA7DnhcGrk/viewform','_blank')">🌺 Записаться в N4</button>
@@ -735,13 +737,13 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
       <div class="plan-header">
         <div class="plan-badge">🔥 Популярный!</div>
         <div class="plan-name">Premium</div>
-        <div class="plan-level">N5 или N4 · первая половина уровня · 4 месяца</div>
+        <div class="plan-level">N5 или N4 · полный курс · 4 месяца</div>
         <div class="plan-price"><span class="cur">₽</span> 89 900</div>
       </div>
       <div class="plan-body">
-        <ul class="plan-list">
-          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#5C3A3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>27 онлайн-занятий (первая половина N5 или N4)</li>
-          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#5C3A3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Мини-группа 6–8 человек</li>
+        <ul class="plan-list" style="gap:8px">
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#5C3A3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>33 онлайн-занятия (полный курс N5 или N4)</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#5C3A3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Мини-группа 5–7 человек</li>
           <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#5C3A3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>2 занятия в неделю по 1 ч. 20 мин.</li>
           <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#5C3A3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Домашние задания с проверкой и обратной связью</li>
           <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#5C3A3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Интерактивная обучающая платформа</li>
@@ -749,12 +751,10 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
           <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#5C3A3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Записи всех занятий бессрочно</li>
           <li style="margin-top:8px;padding-top:10px;border-top:1px dashed var(--border2);font-weight:600;color:var(--brown);font-size:13px;letter-spacing:.3px">＋ Только в Premium:</li>
           <li class="hl"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#5C3A3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>3 индивидуальных урока с сэнсэем</li>
-          <li class="hl"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#5C3A3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Закрытый Telegram-канал</li>
-          <li class="hl"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#5C3A3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Разговорный и читательский клуб</li>
-          <li class="hl"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#5C3A3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Уроки по аниме (на ваш выбор)</li>
+          <li class="hl"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#5C3A3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Уроки по аниме</li>
           <li class="hl"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#F9EEEF"/><path d="M4 7.3L6 9.3L10 5" stroke="#5C3A3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Консультация по поступлению в Японию 🔥</li>
         </ul>
-        <button class="plan-btn rose" onclick="window.open('https://docs.google.com/forms/d/1gLPC5TOqLdee24IAhCQBhTdcNgIST9NFoBA7DnhcGrk/viewform','_blank')">🌸 Записаться в N5</button>
+        <button class="plan-btn rose" style="margin-top:24px" onclick="window.open('https://docs.google.com/forms/d/1gLPC5TOqLdee24IAhCQBhTdcNgIST9NFoBA7DnhcGrk/viewform','_blank')">🌸 Записаться в N5</button>
         <button class="plan-btn dark" style="margin-top:8px" onclick="window.open('https://docs.google.com/forms/d/1gLPC5TOqLdee24IAhCQBhTdcNgIST9NFoBA7DnhcGrk/viewform','_blank')">🌺 Записаться в N4</button>
       </div>
     </div>
@@ -764,27 +764,28 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
       <span class="vip-shimmer"></span>
       <div class="vip-sparkles" id="vip-sparkles"></div>
       <div class="plan-badge gold">✦ VIP</div>
+      <div style="min-height:110px">
       <div class="plan-name">VIP</div>
-      <div class="plan-level">N5 / N4 полный курс · 6,5 месяцев<br><span style="font-size:11px;opacity:.75">1-я половина · 4 мес. (27 занятий) &nbsp;&nbsp; 2-я половина · 2,5 мес. (20 занятий)</span></div>
-      <div class="plan-price"><span class="cur">₽</span> 159 000</div>
+      <div class="plan-level" style="font-size:18px;font-weight:600;letter-spacing:.5px;margin-top:4px;color:#B8913A">Курс 150 часов</div>
+      <div class="plan-level">N5 · полный курс · 6 месяцев (по договорённости)</div>
+      </div>
+      <div class="plan-price"><span class="cur">₽</span> 139 000</div>
       <div class="plan-div"></div>
       <ul class="plan-list">
-        <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#FBF3E4"/><path d="M4 7.3L6 9.3L10 5" stroke="#B8913A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>47 онлайн-занятий — полный курс N5 или N4</li>
-        <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#FBF3E4"/><path d="M4 7.3L6 9.3L10 5" stroke="#B8913A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Мини-группа 6–8 человек</li>
+        <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#FBF3E4"/><path d="M4 7.3L6 9.3L10 5" stroke="#B8913A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>45 онлайн-занятий — полный курс N5</li>
+        <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#FBF3E4"/><path d="M4 7.3L6 9.3L10 5" stroke="#B8913A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Мини-группа 3–4 человека</li>
         <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#FBF3E4"/><path d="M4 7.3L6 9.3L10 5" stroke="#B8913A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>2 занятия в неделю по 1 ч. 20 мин.</li>
         <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#FBF3E4"/><path d="M4 7.3L6 9.3L10 5" stroke="#B8913A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Домашние задания с проверкой и обратной связью</li>
         <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#FBF3E4"/><path d="M4 7.3L6 9.3L10 5" stroke="#B8913A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Интерактивная обучающая платформа</li>
         <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#FBF3E4"/><path d="M4 7.3L6 9.3L10 5" stroke="#B8913A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Чат группы с преподавателем</li>
         <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#FBF3E4"/><path d="M4 7.3L6 9.3L10 5" stroke="#B8913A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Записи всех занятий бессрочно</li>
-        <li class="hl"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#FBF3E4"/><path d="M4 7.3L6 9.3L10 5" stroke="#B8913A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>6 индивидуальных уроков с сэнсэем</li>
-        <li class="hl"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#FBF3E4"/><path d="M4 7.3L6 9.3L10 5" stroke="#B8913A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Telegram-канал + разговорный и читательский клуб</li>
+        <li style="margin-top:8px;padding-top:10px;border-top:1px dashed rgba(184,145,58,.3);font-weight:600;color:var(--gold);font-size:13px;letter-spacing:.3px">＋ Только в VIP:</li>
+        <li class="hl"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#FBF3E4"/><path d="M4 7.3L6 9.3L10 5" stroke="#B8913A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>5 индивидуальных уроков с сэнсэем</li>
         <li class="hl"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#FBF3E4"/><path d="M4 7.3L6 9.3L10 5" stroke="#B8913A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Уроки по аниме</li>
         <li class="hl"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#FBF3E4"/><path d="M4 7.3L6 9.3L10 5" stroke="#B8913A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Консультация по поступлению в Японию 🔥</li>
-        <li class="hl"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#FBF3E4"/><path d="M4 7.3L6 9.3L10 5" stroke="#B8913A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Сертификат N5 от школы</li>
-
+        <li class="hl"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#FBF3E4"/><path d="M4 7.3L6 9.3L10 5" stroke="#B8913A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Свидетельство об окончании 150 часов обучения</li>
       </ul>
       <button class="plan-btn gold" onclick="window.open('https://docs.google.com/forms/d/1gLPC5TOqLdee24IAhCQBhTdcNgIST9NFoBA7DnhcGrk/viewform','_blank')">🌸 Записаться — полный курс N5</button>
-      <button class="plan-btn gold" style="margin-top:8px;background:linear-gradient(135deg,#7A5A2A,#A08040,#8A6A30);box-shadow:0 4px 14px rgba(122,90,42,.2)" onclick="window.open('https://docs.google.com/forms/d/1gLPC5TOqLdee24IAhCQBhTdcNgIST9NFoBA7DnhcGrk/viewform','_blank')">🌺 Записаться — полный курс N4</button>
     </div>
   </div>
   <div class="plan-note">Не уверены, какой тариф подойдет? <a href="https://docs.google.com/forms/d/1gLPC5TOqLdee24IAhCQBhTdcNgIST9NFoBA7DnhcGrk/viewform" target="_blank" rel="noopener">Запишитесь на бесплатную консультацию</a></div>
@@ -801,7 +802,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
     <div class="faq-i" onclick="tFaq(this)"><div class="faq-q">Есть ли бесплатный пробный урок?<span class="faq-ic">+</span></div><div class="faq-a">Да! Вы можете посетить один урок бесплатно как слушатель. Запишитесь через форму или свяжитесь с нами.</div></div>
     <div class="faq-i" onclick="tFaq(this)"><div class="faq-q">Могу ли я присоединиться не с начала?<span class="faq-ic">+</span></div><div class="faq-a">Конечно! Мы определим ваш уровень и подберём подходящую группу.</div></div>
     <div class="faq-i" onclick="tFaq(this)"><div class="faq-q">Какое расписание занятий?<span class="faq-ic">+</span></div><div class="faq-a">2 раза в неделю по 1 час 20 минут. Расписание определяется совместно с группой.</div></div>
-    <div class="faq-i" onclick="tFaq(this)"><div class="faq-q">Получу ли я сертификат?<span class="faq-ic">+</span></div><div class="faq-a">Студенты VIP получают сертификат N5 и справку о 150 часах, принимаемую в миграционной службе Японии.</div></div>
+    <div class="faq-i" onclick="tFaq(this)"><div class="faq-q">Получу ли я сертификат?<span class="faq-ic">+</span></div><div class="faq-a">Студенты VIP (150時間コース) получают сертификат N5/N4 от школы и свидетельство о прохождении 150 часов обучения.</div></div>
     <div class="faq-i" onclick="tFaq(this)"><div class="faq-q">Что если я пропущу урок?<span class="faq-ic">+</span></div><div class="faq-a">Все уроки записываются и доступны бессрочно.</div></div>
     <div class="faq-i" onclick="tFaq(this)"><div class="faq-q">Как помогают с поступлением?<span class="faq-ic">+</span></div><div class="faq-a">Консультируем по выбору школы, помогаем с документами, сопровождаем на каждом этапе.</div></div>
     <div class="faq-i" onclick="tFaq(this)"><div class="faq-q">Какие способы оплаты?<span class="faq-ic">+</span></div><div class="faq-a">Банковские карты, электронные кошельки и другие способы. Оплата из любой точки мира.</div></div>
